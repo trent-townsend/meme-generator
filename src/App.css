@@ -41,6 +41,7 @@ h6 {
 
 .meme-form {
   margin: 2.4rem;
+  max-width: 1000px;
 }
 
 .form-inputs {
@@ -58,7 +59,7 @@ h6 {
   font-weight: 400;
   font-family: Karla, Arial, Helvetica, sans-serif;
   color: #0d0d0d;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .meme-btn {
@@ -80,3 +81,20 @@ h6 {
   margin-left: 0.5rem;
   content: "\1F5BC";
 }
+
+.meme-btn:hover {
+  background: linear-gradient(90.41deg, #a818da 1.14%,  #711f8d 100%);
+}
+.meme-btn:active {
+  background: linear-gradient(90.41deg, #aa18dab6 1.14%,  #721f8dbc 100%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
