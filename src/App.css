@@ -42,6 +42,8 @@ h6 {
 .meme-form {
   margin: 2.4rem;
   max-width: 1000px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-inputs {
@@ -75,6 +77,8 @@ h6 {
   font-size: 1rem;
   font-weight: 700;
   font-family: Karla, Arial, Helvetica, sans-serif;
+  width: 100%;
+  border: none;
 }
 
 .meme-btn ::after {
@@ -92,6 +96,12 @@ h6 {
 main {
   display: flex;
   justify-content: center;
+}
+
+.meme-img {
+  width: 70vw;
+  align-self: center;
+  margin-top: 3rem;
 }
 
 
