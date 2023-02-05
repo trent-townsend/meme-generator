@@ -4,20 +4,20 @@ import memesData from '../../memesdata';
 export default function MemeForm() {
     const memesArray = memesData.data.memes
 
-    const meme = {
+    const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
         randomImg: "http://i.imgflip.com/1bij.jpg"
-    }
-
-    const [allMemeImages, setAllMemeImages] = React.useState(meme)
+    })
 
     function btnClick(e) {
-        setAllMemeImages(prevMeme => {
+        let memeUrl = memesArray[Math.floor(Math.random() * memesArray.length)].url
+
+        setMeme(prevMeme => {
             return{...prevMeme, 
-                randomImg: memesArray[Math.floor(Math.random() * memesArray.length)].url}
+                randomImg: memeUrl}
            })
-           console.log(allMemeImages)
+           
         e.preventDefault();
     }
 
@@ -28,7 +28,7 @@ export default function MemeForm() {
                 <input type="text" placeholder="Lower text" />
             </span>
             <button className='meme-btn' onClick={btnClick}>Get a new meme image &#128444;</button>
-            <img className='meme-img' src={allMemeImages.randomImg}/>
+            <img className='meme-img' src={meme.randomImg}/>
         </form>
     )
 
